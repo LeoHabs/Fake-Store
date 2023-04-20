@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import Card from './Card';
 
 const getPageProducts = (list, page) => {
     const tempArray = Array.from(list);
-
     return tempArray.splice(page * 4, 4);
 };
 

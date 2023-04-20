@@ -6,7 +6,8 @@ import { useDispatch } from "react-redux";
 function Home() {
     const dispatch = useDispatch();
 
-    return <>
+
+    return <div className="home-content">
         <div className="banner">
             <img alt="Bodyshot of four models wearing casual fashion" src="https://marketplace.canva.com/EAFGKRRskMs/1/0/1600w/canva-brown-and-beige-minimalist-fashion-banner-lYcbGpUSVGo.jpg"></img>
         </div>
@@ -19,8 +20,7 @@ function Home() {
                 <HiOutlineChevronRight size={20} />
             </button>
         </div>
-
-    </>
+    </div>
 }
 
 export default Home;
