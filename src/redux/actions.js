@@ -1,4 +1,4 @@
-import { PRODUCTS_SUCCESS, LOADING, FAIL, CATEGORIES_SUCCESS, INCREASE_PAGE, DECREASE_PAGE } from "./types"
+import { PRODUCTS_SUCCESS, LOADING, FAIL, CATEGORIES_SUCCESS, INCREASE_PAGE, DECREASE_PAGE, SET_DETAIL_PROD, SET_DETAIL_STATUS } from "./types"
 
 export const fetchProducts = (dispatch) => {
     dispatch({
@@ -39,5 +39,19 @@ export const decreaseProdPage = (dispatch) => {
     dispatch({
         type: DECREASE_PAGE,
         value: null
+    });
+}
+
+export const setDetailProd = (obj) => {
+    return ({
+        type: SET_DETAIL_PROD,
+        value: obj
+    });
+}
+
+export const setDetailStatus = (status) => {
+    return ({
+        type: SET_DETAIL_STATUS,
+        value: status
     });
 }

@@ -8,3 +8,5 @@ export const GET_PAGE = "getPage";
 export const GET_PRODUCTS = "getProducts";
 export const DECREASE_PAGE = "decreasePage";
 export const INCREASE_PAGE = "increasePage";
+export const SET_DETAIL_PROD = "setDetailProd";
+export const SET_DETAIL_STATUS = "setDetailStatus";

@@ -28,7 +28,7 @@ function CategoryPage() {
 
     return <div className="category-list">
         {getCategoryItems(categoryType, productsList).map(e => {
-            return <div className="product-detailed">
+            return <div className="product-detailed" onClick>
                 <img src={e.image}></img>
                 <div className="product-detailed-firstcontent">
                     <h4>{e.title}</h4>

@@ -1,14 +1,15 @@
-import { LOADING, PRODUCTS_SUCCESS, FAIL, CATEGORIES_SUCCESS, INCREASE_PAGE, DECREASE_PAGE } from "./types";
+import { LOADING, PRODUCTS_SUCCESS, FAIL, CATEGORIES_SUCCESS, INCREASE_PAGE, DECREASE_PAGE, SET_DETAIL_PROD, SET_DETAIL_STATUS } from "./types";
 
 export const initialState = {
     products: [],
     categories: [],
-    page: 0
+    page: 0,
+    detailStatus: false,
+    detailProd: null
 }
 
 export const reducer = (state = initialState, action) => {
     const { type, value } = action;
-    console.log(type)
     switch (type) {
         case PRODUCTS_SUCCESS:
             return { ...state, products: value };
@@ -23,8 +24,9 @@ export const reducer = (state = initialState, action) => {
             if (state.page === 3) {
                 return;
             }
-
             return { ...state, page: state.page + 1 };
+        case SET_DETAIL_PROD:
+            return { ...state, detailProd: value };
         default:
             return state;
     }

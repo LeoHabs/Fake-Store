@@ -2,7 +2,6 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
 function Header() {
-    const navigate = useNavigate();
 
     return <header className="header">
         <div className="header-content">
